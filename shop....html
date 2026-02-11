@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komal Jewelry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg'); /* Background image added */
+            background-size: cover; /* Covers the full page */
+            background-position: center; /* Centers the image */
+            background-attachment: fixed; /* Stays fixed on scroll */
+            background-repeat: no-repeat; /* No repeat */
+            color: #333;
+        }
+        header {
+            background-color: rgba(255, 215, 0, 0.9); /* Gold color, slightly transparent */
+            color: #333;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.95); /* White background, slightly transparent */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #FFC107;
+        }
+        .contact {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: rgba(249, 249, 249, 0.9); /* Light background */
+            border-radius: 8px;
+        }
+        .products {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: rgba(255, 248, 220, 0.9); /* Light gold color */
+            border-radius: 8px;
+        }
+        .products ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .products li {
+            padding: 0.5rem;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+        .products li:last-child {
+            border-bottom: none;
+        }
+        .products img {
+            width: 100px;
+            height: 100px;
+            margin-right: 1rem;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .note {
+            margin-top: 1rem;
+            font-style: italic;
+            color: #666;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Komal Jewelry</h1>
+        <p>Owner: Shankar Lal Kumawat</p>
+        <p>Best quality jewelry products</p>
+    </header>
+    <div class="container">
+        <h2>About Us</h2>
+        <p>At Komal Jewelry, we offer high-quality gold, silver, and diamond jewelry products. Special offers and custom designs are available!</p>
+        <button id="changeTextBtn">Learn More</button>
+        <p id="dynamicText">Click the button for more information about our products.</p>
+        
+        <div class="products">
+            <h3>Our Products (Items List)</h3>
+            <ul>
+                <li>
+                    <img src="ring.jpg" alt="Ring photo">
+                    <div>
+                        <strong>Rings:</strong> Gold and diamond rings in various designs.
+                    </div>
+                </li>
+                <li>
+                    <img src="necklace.jpg" alt="Necklace photo">
+                    <div>
+                        <strong>Necklaces:</strong> Long and short necklaces in silver and gold.
+                    </div>
+                </li>
+                <li>
+                    <img src="bangles.jpg" alt="Bangles photo">
+                    <div>
+                        <strong>Bangles:</strong> Traditional and modern bangles in gold and silver.
+                    </div>
+                </li>
+                <li>
+                    <img src="earrings.jpg" alt="Earrings photo">
+                    <div>
+                        <strong>Earrings:</strong> Stud and hoop earrings adorned with diamonds and emeralds.
+                    </div>
+                </li>
+                <li>
+                    <img src="mangalsutra.jpg" alt="Mangalsutra photo">
+                    <div>
+                        <strong>Mangalsutra:</strong> Special mangalsutra for weddings.
+                    </div>
+                </li>
+                <li>
+                    <img src="bracelets.jpg" alt="Bracelets photo">
+                    <div>
+                        <strong>Bracelets:</strong> Gold and silver bracelets with custom designs.
+                    </div>
+                </li>
+            </ul>
+            <p>Contact us for more products!</p>
+        </div>
+        
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p><strong>Address:</strong> Near Punjab National Bank, Karansar, Jaipur</p>
+            <p><strong>Phone:</strong> 9828628644</p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/9828628644" target="_blank">9828628644</a> (Click to start chat)</p>
+            <p><strong>Email:</strong> contact@komaljewelry.com</p>
+            <p>Call us, WhatsApp, or visit our store!</p>
+            
+            <h4>Contact Form</h4>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div class="note">
+            <p><strong>Note:</strong> This website works offline – no internet needed. Just save the file and open in a browser! For background image, search "best jewelry background images" on Google, download, and save as "background.jpg" in the folder.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('changeTextBtn').addEventListener('click', function() {
+            document.getElementById('dynamicText').textContent = 'We have rings, necklaces, and bangles! Contact: contact@komaljewelry.com 🎉';
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page refresh
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            alert(`Thank you, ${name}! Your message received: "${message}". We'll contact you soon. Email: ${email}`);
+            // Since it's offline, this just shows an alert. Add backend for real submission.
+        });
+    </script>
+</body>
+</html>
